@@ -1,0 +1,9 @@
+@mixin profile($profile: url(../assets/profiles/Rakib_Square.png)) {
+	height: 15rem;
+	background-image: $profile;
+	background-position: center;
+	background-size: cover;
+	width: 15rem;
+	border-radius: 50%;
+	box-shadow: 0 0 30px 1px #929292;
+}
