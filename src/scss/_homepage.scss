@@ -1,14 +1,46 @@
 @use "hamburgermenu";
-
+@use "variables" as v;
 * {
 	margin: 0 auto;
 
 	.hero {
 		color: white;
 		background-image: url(../assets/negative-space-black-forest-dawn.jpg);
-		height: 812px;
+		height: 100vh;
 		width: 100vw;
 		background-position: center;
 		background-size: cover;
+
+		&__description {
+			&__container {
+				text-align: center;
+				height: 60vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				&__title {
+					font-size: 2em;
+					font-family: v.$standardFont;
+					padding: 30px;
+					padding-top: 150px;
+				}
+
+				&__text {
+					font-weight: 100;
+					font-family: v.$standardFont;
+					max-width: 350px;
+					padding: 30px;
+				}
+			}
+		}
+
+		&__arrow {
+			display: flex;
+			height: 25vh;
+			align-items: end;
+			justify-content: center;
+			font-size: 2em;
+		}
 	}
 }

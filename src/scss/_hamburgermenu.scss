@@ -42,9 +42,10 @@
 			background: white;
 			display: block;
 			height: 2px;
-			width: 18px;
+			width: 14px;
 			position: relative;
 			transition: background 0.2s ease-out;
+			transform: scale(2);
 		}
 
 		// top and bottom lines of hamburger icon.
@@ -57,7 +58,7 @@
 			width: 100%;
 			position: absolute;
 			transition: all 0.2s ease-out;
-			top: 7px;
+			top: 5px;
 		}
 
 		&__item:after {
@@ -68,7 +69,7 @@
 			width: 100%;
 			position: absolute;
 			transition: all 0.2s ease-out;
-			top: -7px;
+			top: -5px;
 		}
 	}
 
