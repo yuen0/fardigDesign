@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Some random page</title>
-    <link rel="stylesheet" href="src/scss/main.scss">
-    <script src="https://kit.fontawesome.com/193ad45445.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    
-    <section class="hero">
-         <header>
-            <nav class="hero__nav">
-                <ul>
-                    <li><a href="#home">Hem</a></li>
-                    <li><a href="#about">Om</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Some random page</title>
+		<link rel="stylesheet" href="src/scss/main.scss" />
+		<script
+			src="https://kit.fontawesome.com/193ad45445.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<section class="hero">
+			<nav class="hero__nav">
+				<input type="checkbox" class="hero__nav__btn" id="btn" />
+				<label class="hero__nav__icon" for="btn">
+					<span class="hero__nav__icon__item"></span
+				></label>
 
-        <article class="hero__content">
-            <h1 class="hero__content__title">Welcome to nature</h1>
-            <h2 class="hero__content__text">A journey through time and sleep</h2>
-            <h2 class="hero__content__text">To see how ...cotton ... is mage, made I mean...</h2>
-            <i class="fa-solid fa-circle-arrow-down"></i>
-        </article>
-        
-    </section>
+				<ul class="hero__nav__menu">
+					<li class="hero__nav__menu__item">
+						<a class="hero__nav__menu__item__link" href="#home">Hem</a>
+					</li>
+					<li class="hero__nav__menu__item">
+						<a class="hero__nav__menu__item__link" href="#about">Om</a>
+					</li>
+					<li class="hero__nav__menu__item">
+						<a class="hero__nav__menu__item__link" href="#contact">Kontakt</a>
+					</li>
+				</ul>
+			</nav>
 
-    <section class="team">
-        <article class="team__member">
-            <h3 class="team__member__title">Rakib</h3>
-            <p class="team__member__description">Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på nya tekniker</p>
-        </article>
-        <article class="team__member">
-            <h3 class="team__member__title">Alexandra</h3>
-            <p class="team__member__description">Alexandra håller reda på alla överallt och ser till att det flyter</p>
-        </article>
-        <article class="team__member">
-            <h3 class="team__member__title">Lasse</h3>
-            <p class="team__member__description">Gör övriga saker... mestadels</p>
-        </article>
-        <article class="team__member">
-            <h3 class="team__member__title">Sebastian</h3>
-            <p class="team__member__description">En av våra utbildare som har stor erfarenhet av ganska många saker</p>
-        </article>
-        <i class="fa-solid fa-circle-arrow-down"></i>
-    </section>
+			<article class="hero__content">
+				<h1 class="hero__content__title">Welcome to nature</h1>
+				<h2 class="hero__content__text">A journey through time and sleep</h2>
+				<h2 class="hero__content__text">
+					To see how ...cotton ... is mage, made I mean...
+				</h2>
+				<i class="fa-solid fa-circle-arrow-down"></i>
+			</article>
+		</section>
 
-    <footer class="contact">
-        <p>Tegel Consulting AB</p>
-        <p>Agatvägen 18</p>
-        <p>168 60 Bromma</p>
-        <p>info at tegelconsulting.se</p>
-        <p>070-123 456 78</p>
-        <i class="fa-brands fa-instagram">Instagram</i>
-        <i class="fa-brands fa-twitter">Twitter</i>
-        <i class="fa-brands fa-facebook-f">Facebook</i>
-    </footer>
-</body>
+		<section class="team">
+			<article class="team__member">
+				<h3 class="team__member__title">Rakib</h3>
+				<p class="team__member__description">
+					Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på
+					nya tekniker
+				</p>
+			</article>
+			<article class="team__member">
+				<h3 class="team__member__title">Alexandra</h3>
+				<p class="team__member__description">
+					Alexandra håller reda på alla överallt och ser till att det flyter
+				</p>
+			</article>
+			<article class="team__member">
+				<h3 class="team__member__title">Lasse</h3>
+				<p class="team__member__description">Gör övriga saker... mestadels</p>
+			</article>
+			<article class="team__member">
+				<h3 class="team__member__title">Sebastian</h3>
+				<p class="team__member__description">
+					En av våra utbildare som har stor erfarenhet av ganska många saker
+				</p>
+			</article>
+			<i class="fa-solid fa-circle-arrow-down"></i>
+		</section>
+
+		<footer class="contact">
+			<p>Tegel Consulting AB</p>
+			<p>Agatvägen 18</p>
+			<p>168 60 Bromma</p>
+			<p>info at tegelconsulting.se</p>
+			<p>070-123 456 78</p>
+			<i class="fa-brands fa-instagram">Instagram</i>
+			<i class="fa-brands fa-twitter">Twitter</i>
+			<i class="fa-brands fa-facebook-f">Facebook</i>
+		</footer>
+	</body>
 </html>

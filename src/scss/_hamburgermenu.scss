@@ -1,0 +1,96 @@
+@use "variables" as v;
+
+.hero__nav {
+	//background-color: gray; //temporary
+	position: relative;
+	width: 100%;
+	z-index: 3;
+	background-color: v.$overlayColor;
+	height: 58px;
+
+	&__btn {
+		display: none;
+	}
+
+	&__btn:checked ~ &__menu {
+		opacity: 1;
+	}
+
+	// turns hamburger into X shape when checked
+	&__btn:checked ~ &__icon &__icon__item {
+		background: transparent;
+	}
+
+	&__btn:checked ~ &__icon &__icon__item:before {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+
+	&__btn:checked ~ &__icon &__icon__item:after {
+		transform: rotate(45deg);
+		top: 0;
+	}
+
+	&__icon {
+		padding: 28px 20px;
+		position: relative;
+		float: right;
+		// cursor: pointer; add in the media query for desktop
+
+		// middle line of hamburger icon
+		&__item {
+			background: white;
+			display: block;
+			height: 2px;
+			width: 18px;
+			position: relative;
+			transition: background 0.2s ease-out;
+		}
+
+		// top and bottom lines of hamburger icon.
+		//!!Make a mixin for the properties as well as valfri variabel for "top" property!!
+		&__item:before {
+			background: white;
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			transition: all 0.2s ease-out;
+			top: 7px;
+		}
+
+		&__item:after {
+			background: white;
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			transition: all 0.2s ease-out;
+			top: -7px;
+		}
+	}
+
+	&__menu {
+		margin: 0;
+		padding: 0;
+		clear: both;
+		list-style: none;
+		overflow: hidden;
+		opacity: 0;
+		background-color: v.$overlayColor;
+		height: 80px;
+		transition: opacity 0.2s ease-out; //transition for the navbar
+		text-align: center;
+	}
+
+	.hero__nav__menu__item__link {
+		color: white;
+		font-weight: 600;
+		font-size: 1.2em;
+		display: block;
+		padding: 0;
+		text-decoration: none;
+	}
+}
