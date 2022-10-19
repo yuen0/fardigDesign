@@ -67,5 +67,10 @@
 	&__arrow {
 		margin-top: 5%;
 		font-size: 1.5rem;
+
+		&__link {
+			text-decoration: none;
+			color: black;
+		}
 	}
 }

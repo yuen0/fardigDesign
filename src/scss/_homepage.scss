@@ -2,6 +2,7 @@
 @use "variables" as v;
 * {
 	margin: 0 auto;
+	scroll-behavior: smooth; //only works if smooth scrolling is enabled in browser
 
 	.hero {
 		color: white;
@@ -41,6 +42,11 @@
 			align-items: end;
 			justify-content: center;
 			font-size: 2em;
+
+			&__link {
+				text-decoration: none;
+				color: white;
+			}
 		}
 	}
 }
