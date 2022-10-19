@@ -12,7 +12,7 @@
 		></script>
 	</head>
 	<body>
-		<section class="hero">
+		<section class="hero" id="home">
 			<nav class="hero__nav">
 				<input type="checkbox" class="hero__nav__btn" id="btn" />
 				<label class="hero__nav__icon" for="btn">
@@ -48,7 +48,7 @@
 			</article>
 		</section>
 
-		<section class="team">
+		<section class="team" id="about">
 			<h1 class="team__header">Träffa laget</h1>
 			<article class="team__member">
 				<h2 class="team__member__title">Rakib</h2>
@@ -102,15 +102,33 @@
 			</article>
 		</section>
 
-		<footer class="contact">
-			<p>Tegel Consulting AB</p>
-			<p>Agatvägen 18</p>
-			<p>168 60 Bromma</p>
-			<p>info at tegelconsulting.se</p>
-			<p>070-123 456 78</p>
-			<i class="fa-brands fa-instagram">Instagram</i>
-			<i class="fa-brands fa-twitter">Twitter</i>
-			<i class="fa-brands fa-facebook-f">Facebook</i>
+		<footer class="contact" id="contact">
+			<section class="contact__container">
+				<article class="contact__container__address">
+					<p class="contact__container__address__details">
+						Tegel Consulting AB
+					</p>
+					<p class="contact__container__address__details">Agatvägen 18</p>
+					<p class="contact__container__address__details">168 60 Bromma</p>
+				</article>
+				<article class="contact__container__info">
+					<p class="contact__container__info__details">
+						info at tegelconsulting.se
+					</p>
+					<p class="contact__container__info__details">070-123 456 78</p>
+				</article>
+				<article class="contact__container__socials">
+					<a href="javascript:;" class="contact__container__socials__link"
+						><i class="fa-brands fa-instagram"></i> Instagram</a
+					>
+					<a href="javascript:;" class="contact__container__socials__link"
+						><i class="fa-brands fa-twitter"></i> Twitter</a
+					>
+					<a href="javascript:;" class="contact__container__socials__link"
+						><i class="fa-brands fa-facebook-f"></i> Facebook</a
+					>
+				</article>
+			</section>
 		</footer>
 	</body>
 </html>

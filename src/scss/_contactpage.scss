@@ -1,71 +1,52 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.team {
-	display: flex;
+.contact {
+	background-color: black;
+	margin-top: 9%;
 	width: 100vw;
-	height: 100%;
+	height: 70vh;
+	color: white;
+	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 
-	&__header {
-		font-size: 2rem;
-		padding: 7% 0 4%;
-	}
-	&__member {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		&__title {
-			font-size: 1rem;
-			padding: 8% 0 8%;
-		}
-
-		//profiles/pictures
-		&__one {
-			@include m.profile;
-		}
-
-		&__two {
-			@include m.profile(url(../assets/profiles/Alexandra_Square.png));
-		}
-
-		&__three {
-			@include m.profile(url(../assets/profiles/NoPerson_Square.png));
-		}
-
-		&__four {
-			@include m.profile(url(../assets/profiles/Sebastian_Square.png));
-		}
-		&__container {
-			margin-top: 8%;
-			width: 70vw;
-			height: 15vh;
-			background-color: lightgray;
-			border-radius: 5px;
+	&__container {
+		&__address {
+			font-size: 1.2rem;
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			&__description {
-				display: inline-block;
-				font-weight: 600;
-				font-size: 1rem;
-				max-width: 50vw;
-				text-align: left;
-				line-height: 1;
-
-				&__quote {
-					font-size: 2.3rem;
-				}
+			flex-direction: column;
+			align-items: start;
+			margin-top: 5%; //not included in mixin
+			&__details {
+				margin: 5%;
+				width: max-content;
 			}
 		}
-	}
-
-	&__arrow {
-		margin-top: 5%;
-		font-size: 1.5rem;
+		&__info {
+			margin-top: 20%;
+			font-size: 1.2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			&__details {
+				margin: 5%;
+				width: max-content;
+			}
+		}
+		&__socials {
+			margin-top: 20%;
+			display: flex;
+			font-size: 1.5rem;
+			flex-direction: column;
+			align-items: start;
+			&__link {
+				text-decoration: none;
+				color: white;
+				font-size: 1.3rem;
+				width: max-content;
+				margin: 5%;
+			}
+		}
 	}
 }

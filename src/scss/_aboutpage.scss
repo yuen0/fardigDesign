@@ -1,0 +1,71 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.team {
+	display: flex;
+	width: 100vw;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&__header {
+		font-size: 2rem;
+		padding: 7% 0 4%;
+	}
+	&__member {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&__title {
+			font-size: 1rem;
+			padding: 8% 0 8%;
+		}
+
+		//profiles
+		&__one {
+			@include m.profile;
+		}
+
+		&__two {
+			@include m.profile(url(../assets/profiles/Alexandra_Square.png));
+		}
+
+		&__three {
+			@include m.profile(url(../assets/profiles/NoPerson_Square.png));
+		}
+
+		&__four {
+			@include m.profile(url(../assets/profiles/Sebastian_Square.png));
+		}
+		&__container {
+			margin-top: 8%;
+			width: 70vw;
+			height: 15vh;
+			background-color: lightgray;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&__description {
+				display: inline-block;
+				font-weight: 600;
+				font-size: 1rem;
+				max-width: 50vw;
+				text-align: left;
+				line-height: 1;
+
+				&__quote {
+					font-size: 2.3rem;
+				}
+			}
+		}
+	}
+
+	&__arrow {
+		margin-top: 5%;
+		font-size: 1.5rem;
+	}
+}
