@@ -36,6 +36,10 @@
 		float: right;
 		// cursor: pointer; add in the media query for desktop
 
+		@include m.desktop {
+			display: none;
+		}
+
 		// middle line of hamburger icon
 		.hero__icon-item {
 			background: white;
@@ -67,6 +71,22 @@
 		transition: opacity 0.2s ease-out; //transition for the navbar
 		text-align: center;
 
+		@include m.desktop {
+			opacity: 1;
+			display: flex;
+			float: right;
+			height: 58px;
+			width: 100%;
+			background-color: transparent;
+			padding-right: 50px;
+			justify-content: end;
+			align-items: center;
+
+			.hero__item {
+				margin: 1%;
+			}
+		}
+
 		.hero__link {
 			color: white;
 			font-weight: 600;
@@ -74,6 +94,12 @@
 			display: block;
 			padding: 0;
 			text-decoration: none;
+
+			@include m.desktop {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

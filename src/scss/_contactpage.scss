@@ -10,12 +10,27 @@
 	flex-direction: column;
 	justify-content: center;
 
+	@include m.desktop {
+		margin-top: 2%;
+		height: 25vh;
+	}
+
 	&__container {
+		@include m.desktop {
+			display: flex;
+			width: 70%;
+			justify-content: space-around;
+			align-items: start;
+		}
 		.contact__address {
 			@include m.cont-styling(20%, 1.2rem);
+
 			.contact__address-details {
 				margin: 5%;
 				width: max-content;
+			}
+			@include m.desktop {
+				margin-top: 0;
 			}
 		}
 		.contact__info {
@@ -24,9 +39,17 @@
 				margin: 5%;
 				width: max-content;
 			}
+
+			@include m.desktop {
+				margin-top: 0;
+			}
 		}
 		.contact__socials {
 			@include m.cont-styling(20%, 1.5rem);
+
+			@include m.desktop {
+				margin-top: 0;
+			}
 			.contact__link {
 				text-decoration: none;
 				color: white;

@@ -1,3 +1,6 @@
+@use "variables" as v;
+
+//profile styling and sizing
 @mixin profile($profile: url(../assets/profiles/NoPerson_Square.png)) {
 	height: 15rem;
 	background-image: $profile;
@@ -8,6 +11,12 @@
 	box-shadow: 0 0 30px 1px #929292;
 }
 
+@mixin profile-desktop {
+	height: 28rem;
+	width: 28rem;
+}
+///
+//hamburger icon bottom and top lines
 @mixin hamburger($top) {
 	background: white;
 	content: "";
@@ -18,6 +27,7 @@
 	transition: all 0.2s ease-out;
 	top: $top;
 }
+///
 
 @mixin cont-styling($margin, $fsize) {
 	font-size: $fsize;
@@ -26,3 +36,11 @@
 	flex-direction: column;
 	align-items: start;
 }
+
+//Responsiveness
+@mixin desktop {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+///
