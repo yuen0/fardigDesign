@@ -1,44 +1,43 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .hero__nav {
-	//background-color: gray; //temporary
 	position: relative;
 	width: 100%;
 	z-index: 3;
 	background-color: v.$overlayColor;
 	height: 58px;
 
-	&__btn {
+	.hero__btn {
 		display: none;
 	}
-
-	&__btn:checked ~ &__menu {
+	.hero__btn:checked ~ .hero__menu {
 		opacity: 1;
 	}
 
 	// turns hamburger into X shape when checked
-	&__btn:checked ~ &__icon &__icon__item {
+	.hero__btn:checked ~ .hero__icon .hero__icon-item {
 		background: transparent;
 	}
 
-	&__btn:checked ~ &__icon &__icon__item:before {
+	.hero__btn:checked ~ .hero__icon .hero__icon-item:before {
 		transform: rotate(-45deg);
 		top: 0;
 	}
 
-	&__btn:checked ~ &__icon &__icon__item:after {
+	.hero__btn:checked ~ .hero__icon .hero__icon-item:after {
 		transform: rotate(45deg);
 		top: 0;
 	}
 
-	&__icon {
+	.hero__icon {
 		padding: 28px 20px;
 		position: relative;
 		float: right;
 		// cursor: pointer; add in the media query for desktop
 
 		// middle line of hamburger icon
-		&__item {
+		.hero__icon-item {
 			background: white;
 			display: block;
 			height: 2px;
@@ -47,51 +46,34 @@
 			transition: background 0.2s ease-out;
 			transform: scale(2);
 		}
-
 		// top and bottom lines of hamburger icon.
-		//!!Make a mixin for the properties as well as valfri variabel for "top" property!!
-		&__item:before {
-			background: white;
-			content: "";
-			display: block;
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			transition: all 0.2s ease-out;
-			top: 5px;
+		.hero__icon-item:before {
+			@include m.hamburger(5px);
 		}
 
-		&__item:after {
-			background: white;
-			content: "";
-			display: block;
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			transition: all 0.2s ease-out;
-			top: -5px;
+		.hero__icon-item:after {
+			@include m.hamburger(-5px);
 		}
 	}
 
-	&__menu {
+	.hero__menu {
 		margin: 0;
 		padding: 0;
 		clear: both;
 		list-style: none;
-		overflow: hidden;
 		opacity: 0;
 		background-color: v.$overlayColor;
 		height: 80px;
 		transition: opacity 0.2s ease-out; //transition for the navbar
 		text-align: center;
-	}
 
-	.hero__nav__menu__item__link {
-		color: white;
-		font-weight: 600;
-		font-size: 1.2em;
-		display: block;
-		padding: 0;
-		text-decoration: none;
+		.hero__link {
+			color: white;
+			font-weight: 600;
+			font-size: 1.2em;
+			display: block;
+			padding: 0;
+			text-decoration: none;
+		}
 	}
 }

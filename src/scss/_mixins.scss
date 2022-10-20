@@ -1,4 +1,4 @@
-@mixin profile($profile: url(../assets/profiles/Rakib_Square.png)) {
+@mixin profile($profile: url(../assets/profiles/NoPerson_Square.png)) {
 	height: 15rem;
 	background-image: $profile;
 	background-position: center;
@@ -6,4 +6,23 @@
 	width: 15rem;
 	border-radius: 50%;
 	box-shadow: 0 0 30px 1px #929292;
+}
+
+@mixin hamburger($top) {
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	top: $top;
+}
+
+@mixin cont-styling($margin, $fsize) {
+	font-size: $fsize;
+	margin-top: $margin;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 }
