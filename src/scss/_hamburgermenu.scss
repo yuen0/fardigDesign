@@ -34,7 +34,6 @@
 		padding: 28px 20px;
 		position: relative;
 		float: right;
-		// cursor: pointer; add in the media query for desktop
 
 		@include m.desktop {
 			display: none;
